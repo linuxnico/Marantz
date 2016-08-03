@@ -17,6 +17,8 @@ Flask
 
 python3 marantz.py
 
+and point your browser on http://127.0.0.1:5000
+
 ##todo
 
 correction for mobil interface
