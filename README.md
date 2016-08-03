@@ -25,5 +25,5 @@ correction for mobil interface
 
 
 
-sorry for the code quality, i neeby...
+sorry for the code quality, i newbie...
 
