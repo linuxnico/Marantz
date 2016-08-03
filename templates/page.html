@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+        <html>
+            <head>
+                <meta charset="utf-8" /> 
+                <META HTTP-EQUIV="Refresh" CONTENT="30; /">              
+        		<link rel="stylesheet" href="{{ url_for('static',filename='marantz.css')}}" />
+        		<meta name="viewport" content="width=[widest centered div];"/>
+                <title>Marantz</title>
+            </head>
+            <body>
+            	<div id="entete"><a href="/"><img id="entete_img" src="{{ url_for('static', filename="images/marantz-logo.jpg") }}"></a></div>
+            	<div id="bloc_icon">
+            	<div id="sources"> 
+            		
+            				<form action="" method="GET">
+            					<input type='hidden' name='commande' value='SI'>
+            					<input type='hidden' name='arg' value='IRADIO'>
+            					<input id="radioButton" type="image" src="{{ url_for('static',filename='images/radio.png')}}" value="Internet radio" {{si[0]}}/>
+            				</form>
+            			
+            				<form action="" method="GET">
+            					<input type='hidden' name='commande' value='SI'>
+            					<input type='hidden' name='arg' value='BLUETOOTH'>
+            					<input id="radioButton" type="image" src="{{ url_for('static',filename='images/bluetooth.png')}}"value="BlueTooth" {{si[1]}}/>
+            				</form>
+            			
+            				<form action="" method="GET">
+            					<input type='hidden' name='commande' value='SI'>
+            					<input type='hidden' name='arg' value='USB'>
+            					<input id="radioButton" type="image" src="{{ url_for('static',filename='images/usb.png')}}" value="Usb" {{si[2]}}/>
+            				</form>            		           	
+            	</div>
+            	
+            	<div id="volume">            		
+            				<form action="" method="GET">
+            					<input type='hidden' name='commande' value='MV'>
+            					<input type='hidden' name='arg' value='UP'>
+            					<input id="radioButton" type="image" src="{{ url_for('static',filename='images/volume_up.png')}}" value="Augmente" />
+            				</form>            			
+            				<form action="" method="GET">
+            					<input type='hidden' name='commande' value='MV'>
+            					<input type='hidden' name='arg' value='DOWN'>
+            					<input id="radioButton" type="image" src="{{ url_for('static',filename='images/volume_down.png')}}" value="Diminue" />
+            				</form>
+            				<form action="" method="GET">
+            					<input type='hidden' name='commande' value='MU'>
+            					<input type='hidden' name='arg' value='ON'>
+            					<input id="radioButton" type="image" src="{{ url_for('static',filename='images/mute.png')}}" value="Mute" />
+            				</form>	
+            	</div>
+            	
+            	<div id="power">
+            				<form action="" method="GET">
+            					<input type='hidden' name='commande' value='PW'>
+            					<input type='hidden' name='arg' value='ON'>
+            					<input id="radioButton" type="image" src="{{ url_for('static',filename='images/power.png')}}" value="Allumage" />
+            				</form>
+    	
+            	</div>
+            	
+            	<div id="station">
+					<div id="texte_station">
+						{% for line in table %}
+							<a href="/?commande=NSB&arg={{ loop.index0 }}">{{line}}</a><br />
+						{% endfor %}
+				
+					</div>        	
+            	</div>
+                </div>
+            </body>
+        </html>
