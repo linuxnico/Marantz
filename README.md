@@ -1,21 +1,25 @@
 #Marantz web interface in python for Amplifier CR 510 / CR 511
 (perhaps others with api)
 
-##Description:
+##Description
 A little web interface for web server to command marantz amplifier
 
 work with model:
 	CR510
 	
 	
-#Necessary:
+##Necessary
 
 Python3
 Flask
 
-#Use
+##Use
 
 python3 marantz.py
+
+##todo
+
+correction for mobil interface
 
 
 
